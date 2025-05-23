@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">MyPortfolio</div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#toolkit">Toolkit</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Hi, I'm Benjamin Alex</h1>
+      <p>Frontend Developer | JavaScript Enthusiast</p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>I create modern, responsive websites with clean code and engaging design.</p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">Git</div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">Movie Watchlist</div>
+        <div class="card">Student Register</div>
+        <div class="card">Quiz Game</div>
+      </div>
+    </section>
+
+    <section id="toolkit" class="section">
+      <h2>Toolkit</h2>
+      <ul>
+        <li>VS Code</li>
+        <li>Git & GitHub</li>
+        <li>Chrome DevTools</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Benjamin Alex</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
