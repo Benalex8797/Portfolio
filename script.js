@@ -8,6 +8,26 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const links = document.querySelectorAll(".nav-links a");
+
+  // Toggle nav on hamburger click
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  // Close nav when a link is clicked
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+    });
+  });
+});
+
+
+
 // Navbar background on scroll (use class, not inline style)
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar");
@@ -68,3 +88,37 @@ toggleBtn.addEventListener("click", () => {
   const theme = body.classList.contains("light") ? "light" : "dark";
   localStorage.setItem("theme", theme);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const paragraph = document.getElementById("typing-text");
+
+  const text =
+    "I'm a passionate Full-Stack Developer specializing in creating modern web applications with clean architecture and best practices. With expertise in both front-end and back-end technologies, I build scalable and maintainable software solutions.";
+
+  let index = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    if (!isDeleting) {
+      paragraph.innerText = text.substring(0, index + 1);
+      index++;
+      if (index === text.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1500);
+        return;
+      }
+    } else {
+      paragraph.innerText = text.substring(0, index - 1);
+      index--;
+      if (index === 0) {
+        isDeleting = false;
+      }
+    }
+    setTimeout(typeEffect, isDeleting ? 20 : 40);
+  }
+
+  typeEffect();
+});
+
+
+

@@ -1,91 +1,323 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
-  <header class="header">
-    <div class="logo">MyPortfolio</div>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#toolkit">Toolkit</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+
+    <!-- Header -->
+<header>
+    <a href="#" class="logo">Emmanuel_<span></span>Tech</a>
+    <div id="menu-icon">≡</div>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#contact">Contact</a>
     </nav>
+    
   </header>
-
-  <main>
-    <section class="hero">
-      <h1>Hi, I'm Benjamin Alex</h1>
-      <p>Frontend Developer | JavaScript Enthusiast</p>
-    </section>
-
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>I create modern, responsive websites with clean code and engaging design.</p>
-    </section>
-
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <div class="grid">
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">JavaScript</div>
-        <div class="card">Git</div>
+  
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="particle-container"></div>
+    <div class="home-content">
+      <h1>Hi, I'm <span>Emmanuel Quarshie</span></h1>
+      <div class="text-animate">
+        <h3>Full-Stack Developer</h3>
       </div>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">Movie Watchlist</div>
-        <div class="card">Student Register</div>
-        <div class="card">Quiz Game</div>
+     <p id="typing-text"></p>
+      <div class="social-links">
+        <a href="#"><span class="icon"><i class="fab fa-linkedin"></i></span></a>
+        <a href="#"><span class="icon"><i class="fab fa-github"></i></span></a>
+        <a href="#"><span class="icon"><i class="fab fa-twitter"></i></span></a>
+        <a href="#"><span class="icon"><i class="fab fa-facebook"></i></span></a>
+        <a href="#"><span class="icon"><i class="fab fa-instagram"></i></span></a>
       </div>
-    </section>
+      <a href="#contact" class="btn">Let's Connect</a>
+    </div>
+  
+    <div class="home-img">
+      <div class="glowing-circle">
+        <div class="image">
+          <img src="images/pip1.jpg" alt="Emmanuel Quarshie">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2 class="heading">About <span>Me</span></h2>
+    <div class="about-content">
+      <div class="about-img">
+        <img src="images/pip2.jpg" alt="Working on code">
+      </div>
+      <div class="about-text">
+        <h3>Passionate Full-Stack Developer</h3>
+        <p>With a strong foundation in software development, I develop robust and scalable applications that solve real-world problems. My experience spans across various domains of software development, from designing clean architectures to implementing modern UI/UX patterns.</p>
+        <p>I'm dedicated to continuous learning and staying updated with the latest industry trends and technologies. My approach to development focuses on writing clean, maintainable code while delivering exceptional user experiences.</p>
+        <a href="#" class="btn">Download CV</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+    <div class="skills-container">
+      <div class="skills-box">
+        <h3>Back-End</h3>
+        <p>Expertise in server-side development with focus on scalable and maintainable solutions.</p>
+        <div class="skills-list">
+          <span>C# ASP.NET Core</span>
+          <span>Java</span>
+          <span>PHP</span>
+          <span>Python</span>
+          <span>Flask</span>
+          <span>Django</span>
+        </div>
+      </div>
+  
+      <div class="skills-box">
+        <h3>Front-End</h3>
+        <p>Creating modern and responsive user interfaces with the latest technologies.</p>
+        <div class="skills-list">
+          <span>React</span>
+          <span>Angular</span>
+          <span>HTML/CSS</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+  
+      <div class="skills-box">
+        <h3>Architecture</h3>
+        <p>Designing robust systems with best practices and patterns.</p>
+        <div class="skills-list">
+          <span>Hexagonal</span>
+          <span>Microservices</span>
+          <span>Clean Architecture</span>
+          <span>CQRS</span>
+        </div>
+      </div>
+  
+      <div class="skills-box">
+        <h3>Design Patterns</h3>
+        <p>Implementing proven solutions to common software design problems.</p>
+        <div class="skills-list">
+          <span>Creational</span>
+          <span>Structural</span>
+          <span>Behavioral</span>
+          <span>Conceptual</span>
+        </div>
+      </div>
+  
+      <div class="skills-box">
+        <h3>Databases</h3>
+        <p>Working with various database systems for efficient data storage and retrieval.</p>
+        <div class="skills-list">
+          <span>SQL Server</span>
+          <span>MySQL</span>
+          <span>MongoDB</span>
+          <span>EntityFramework</span>
+        </div>
+      </div>
+  
+      <div class="skills-box">
+        <h3>Collaboration</h3>
+        <p>Effective team collaboration and project management skills.</p>
+        <div class="skills-list">
+          <span>Git/GitHub</span>
+          <span>Jira</span>
+          <span>Agile</span>
+          <span>Scrum</span>
+          <span>Kanban</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2 class="heading">Recent <span>Projects</span></h2>
+    <div class="projects-container">
+      <div class="projects-box">
+        <!-- Use a screenshot of your e-commerce platform's homepage or product page -->
+        <img src="images/ecm.jpg" alt="E-Commerce Platform Screenshot">
+        <div class="projects-layer">
+          <h4>E-Commerce Platform</h4>
+          <p>Full-stack e-commerce solution with C# and React, implementing microservices architecture.</p>
+          <a href="#"><span>→</span></a>
+        </div>
+      </div>
+  
+      <div class="projects-box">
+        <!-- Use a screenshot of your CRM dashboard or contact management interface -->
+        <img src="images/CRM System.jpg" alt="CRM System Screenshot">
+        <div class="projects-layer">
+          <h4>CRM System</h4>
+          <p>Customer relationship management system built with ASP.NET Core and Angular.</p>
+          <a href="#"><span>→</span></a>
+        </div>
+      </div>
+  
+      <div class="projects-box">
+        <!-- Use a screenshot of your task management app's board view or task list -->
+        <img src="images/task.jpg" alt="Task Management App Screenshot">
+        <div class="projects-layer">
+          <h4>Task Management App</h4>
+          <p>Collaborative task management platform using CQRS pattern and Vue.js.</p>
+          <a href="#"><span>→</span></a>
+        </div>
+      </div>
+  
+      <div class="projects-box">
+        <!-- Use a screenshot of your inventory dashboard or product tracking interface -->
+        <img src="images/invest.jpg" alt="Inventory System Screenshot">
+        <div class="projects-layer">
+          <h4>Inventory System</h4>
+          <p>Real-time inventory tracking system with ASP.NET Core and SignalR.</p>
+          <a href="#"><span>→</span></a>
+        </div>
+      </div>
+  
+      <div class="projects-box">
+        <!-- Use a screenshot of your analytics dashboard with charts/graphs -->
+        <img src="images/analy.jpg" alt="Analytics Dashboard Screenshot">
+        <div class="projects-layer">
+          <h4>Analytics Dashboard</h4>
+          <p>Interactive analytics dashboard with C# backend and React/D3.js frontend.</p>
+          <a href="#"><span>→</span></a>
+        </div>
+      </div>
+  
+      <div class="projects-box">
+        <!-- Use a screenshot of your health monitoring interface or device integration -->
+        <img src="images/health.jpg" alt="Health Monitoring System Screenshot">
+        <div class="projects-layer">
+          <h4>Health Monitoring System</h4>
+          <p>IoT-based health monitoring solution with microservices architecture.</p>
+          <a href="#"><span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="toolkit" class="section">
-      <h2>Toolkit</h2>
-      <ul>
-        <li>VS Code</li>
-        <li>Git & GitHub</li>
-        <li>Chrome DevTools</li>
-      </ul>
-    </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <form>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+  <!-- Contact Section -->
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+      </div>
+      <div class="input-box">
+        <input type="tel" placeholder="Phone Number">
+        <input type="text" placeholder="Subject">
+      </div>
+      <textarea cols="30" rows="10" placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </form>
+  </div>
+  <div class="contact-info">
+    <div class="info-card">
+      <p><i class="fas fa-envelope"></i> 
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emmanuelquarshie395@gmail.com&su=Inquiry&body=Hello%20Emmanuel%2C" target="_blank">
+          emmanuelquarshie395@gmail.com
+        </a>
+      </p>
+      <p><i class="fas fa-phone-alt"></i> 
+        <a href="tel:+233506552368">+233 506 552 368</a>
+      </p>
+      <p><i class="fab fa-whatsapp"></i> 
+        <a href="https://wa.me/233532622248" target="_blank">+233 532 622 248</a>
+      </p>
+      <p><i class="fas fa-map-marker-alt"></i> Teshie Accra, Ghana</p>
+    </div>
+    
+  </div>
+  
+  <!-- Google Map iframe -->
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.6937966856126!2d-0.1345755259268183!3d5.612159594368797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf84dd0d3b9991%3A0xc3edc513cbcc6e1e!2sAnbert%20Garden!5e0!3m2!1sen!2sgh!4v1746183012300!5m2!1sen!2sgh
+      allowfullscreen="
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
 
+
+
+  
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Benjamin Alex</p>
+    <div class="footer-text">
+      <p>&copy; 2025 Emmanuel Quarshie | All Rights Reserved</p>
+    </div>
+    <div class="footer-iconTop">
+      <a href="#home"><span>↑</span></a>
+    </div>
   </footer>
 
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.querySelector('.navbar');
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
     });
-  </script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const paragraph = document.getElementById("typing-text");
+
+    const text = "I'm a passionate Full-Stack Developer specializing in creating modern web applications with clean architecture and best practices. With expertise in both front-end and back-end technologies, I build scalable and maintainable software solutions.";
+    
+    let index = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      if (!isDeleting) {
+        paragraph.innerText = text.substring(0, index + 1);
+        index++;
+        if (index === text.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1500);
+          return;
+        }
+      } else {
+        paragraph.innerText = text.substring(0, index - 1);
+        index--;
+        if (index === 0) {
+          isDeleting = false;
+        }
+      }
+      setTimeout(typeEffect, isDeleting ? 20 : 40);
+    }
+
+    typeEffect();
+  });
+</script>
+
+
+    
 </body>
 </html>

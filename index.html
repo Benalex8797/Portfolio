@@ -10,7 +10,7 @@
 <body>
     
     <nav class="navbar">
-        <a href="#home" class="logo">FrontDev</a>
+      <a href="#home"><img src="./logos.png" alt="logo" style="width: 4rem; border-radius: 50%;"></a>
         <ul class="nav-links">
           <li><a href="#home">HOME</a></li>
           <li><a href="#about">ABOUT</a></li>
@@ -18,16 +18,36 @@
           <li><a href="#skills">SKILLS</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
-        <button id="themeToggle" class="theme-toggle">🌓 Toggle Theme</button>
+        <button id="themeToggle" class="theme-toggle">🌓</button>
+       
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
       </nav>
       
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <h2><span class="typewriter">Hi, I’m Alex Benjamin👋</span></h2>
+            <h1>Alex Benjamin</span></h1>
             <h1>Full Stack Developer</h1>
-            <p>Building digital experience that merge creativity and technology</p>
-            <p class="highlight">Specialized in moderm web development</p>
+            <p class="highlight">Building digital experience that merge creativity and technology</p>
+            <p id="typing-text"></p>
+            <div class="social-links">
+              <a href="https://github.com/Benalex8797
+              "><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/benjamin-alex-42b974350
+              "><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.upwork.com/freelancers/~benjaminalex
+              "><i class="fa-brands fa-upwork"></i></a>
+              <a href="https://twitter.com/Atamilliondoll1"><i class="fa-brands fa-square-x-twitter"></i></a>
+              <a href=https://www.instagram.com/direct/inbox/
+              ><i class="fa-brands fa-square-instagram"></i></a>
+              <a href="https://wa.me/2348139788891?text=Hello%20Benjamin%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.
+              "><i class="fa-brands fa-whatsapp"></i></a>
+          </div><br>
             <a href="#contact" class="cta-button">Let's Connect</a>
             <div class="hero-image">
                 <img src="WhatsApp Image 2025-05-18 at 4.01.26 PM.jpeg" alt="Alex Benjamin" class="profile-img">
@@ -36,15 +56,13 @@
     </section>
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>Hi, I’m Alex — a passionate Full Stack Developer who loves crafting clean, responsive, and user-friendly web applications. My journey into tech started with a curiosity about how digital experiences work, and it quickly grew into a mission to solve real-world problems through code.
-
-            I work primarily with modern technologies like JavaScript, React, Node.js, and Express, and I’m always learning something new to level up my skills. I’m big on writing clean, maintainable code and designing intuitive user experiences that feel seamless and engaging.
-            
-            What drives me most is the constant learning, the creative freedom, and the thrill of bringing ideas to life — whether I’m building sleek frontend interfaces or powerful backend systems</p>
+        <p>Hi, I’m Alex — a passionate Full Stack Developer who loves crafting clean, responsive, and     user-friendly web applications. 
+          With a strong foundation in software development, I develop robust and scalable applications that solve real-world problems. My experience spans across various domains of software development, from designing clean architectures to implementing modern UI/UX patterns.
+        </p><br>
         <p>
-            I'm a passionate Full Stack Developer focused on creating seamless digital experiences.
-            From beautiful frontends to powerful backend systems, I bring ideas to life with clean, efficient code.
-        </p>
+          I'm dedicated to continuous learning and staying updated with the latest industry trends and technologies. My approach to development focuses on writing clean, maintainable code while delivering exceptional user experiences.
+        </p><br>
+        <a href="Alex_Benjamin_Resume_No_Emojis_Updated.pdf" download class="cta-button">Download CV</a>
     </section>
 
     <section>
@@ -158,9 +176,37 @@
             <button type="submit">Send Message</button>
             <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
             <p id="form-status" style="margin-top: 10px; color: var(--accent);"></p>
-
         </form>
-        <a href="Alex_Benjamin_Resume_No_Emojis_Updated.pdf" download class="cta-button">Download CV</a>
+        
+
+        <div class="contact-info">
+          <div class="info-card">
+            <p><i class="fas fa-envelope"></i> 
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=benalex8797@gmail.com&su=Inquiry&body=Hello%20Benjamin%2C" target="_blank">
+                benalex8797@gmail.com
+              </a>
+              
+            </p>
+            <p><i class="fas fa-phone-alt"></i> 
+              <a href="tel:+2348139788891">+234 813 788 891</a>
+            </p>
+            <p><i class="fab fa-whatsapp"></i> 
+              <a href="https://wa.me/2348139788891" target="_blank">+234 813 788 891</a>
+            </p>
+            <p><i class="fas fa-map-marker-alt"></i> Kaduna, Nigeria</p>
+          </div>
+          
+        </div>
+
+        <div class="map-container">
+          <iframe class="position-relative rounded w-100 h-100"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126898.40830805936!2d7.3650503!3d10.4806526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105579d689a9b6d3%3A0x6e47b0892cf9aafa!2sPlot%20No%207%2C%20Kaduna-Abuja%20Express%20Way%2C%20Federal%20Housing%2C%20Kaduna%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1716732050061!5m2!1sen!2sng"
+    frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+    tabindex="0">
+</iframe>
+
+        </div>
+        
     </section>
    
    
@@ -174,8 +220,8 @@
           <p class="testimonial-text">"Working with this developer was a breeze! Highly recommend."</p>
         </div>
         <div class="testimonial-card">
-          <img src="IMG-20250109-WA0045.jpg" alt="Person 2" class="testimonial-img" />
-          <div class="testimonial-name">Blessing Alex</div>
+          <img src="precious.jpg" alt="Person 2" class="testimonial-img" />
+          <div class="testimonial-name">Precious</div>
           <div class="testimonial-role">Product Manager</div>
           <p class="testimonial-text">"Delivered on time and exceeded expectations. Top-notch quality."</p>
         </div>
@@ -189,19 +235,7 @@
     
     <footer>
         <p>&copy; 2025 Alex Benjamin. All rights reserved</p>
-        <div class="social-links">
-            <a href="https://github.com/Benalex8797
-            "><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/benjamin-alex-42b974350
-            "><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.upwork.com/freelancers/~benjaminalex
-            "><i class="fa-brands fa-upwork"></i></a>
-            <a href="https://twitter.com/Atamilliondoll1"><i class="fa-brands fa-square-x-twitter"></i></a>
-            <a href=https://www.instagram.com/direct/inbox/
-            ><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="https://wa.me/2348139788891?text=Hello%20Benjamin%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.
-            "><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
+        <p>Designed by Alex Benjamin</p>
     </footer>
     
 

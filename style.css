@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
   }
   
   :root {
@@ -13,6 +14,13 @@
     --accent-glow: rgba(46, 204, 113, 0.4);
     --text: #ffffff;
     --navbar-bg: rgba(10, 10, 10, 0.95);
+    --navbar-bg-scrolled: rgba(10, 10, 10, 0.98);
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --card-bg-light: rgba(255, 255, 255, 0.9);
+    --card-bg-dark: rgba(10, 10, 10, 0.9);
+    --border-light: rgba(255, 255, 255, 0.1);
+    --border-dark: rgba(10, 10, 10, 0.1);
+    --hover: #4a4e69;
   }
   
   body.light,
@@ -22,10 +30,13 @@
     --accent: #2ecc71;
     --accent-glow: rgba(46, 204, 113, 0.15);
     --text: #000000;
-    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --navbar-bg: rgba(14, 114, 104, 0.95);
     --navbar-bg-scrolled: rgba(230, 230, 230, 0.99);
+    --card-bg: rgba(27, 87, 56, 0.9);
+    
   }
   
+
   body.dark,
   body.dark * {
     --dark-bg: #0a0a0a;
@@ -35,6 +46,7 @@
     --text: #ffffff;
     --navbar-bg: rgba(10, 10, 10, 0.95);
     --navbar-bg-scrolled: rgba(10, 10, 10, 0.98);
+    --card-bg: rgba(255, 255, 255, 0.9);
   }
   
   body {
@@ -47,14 +59,15 @@
   
   .theme-toggle {
     background: none;
-    border: 3px solid var(--accent);
+    border: none;
     color: var(--text);
     padding: 0.5rem 1rem;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    position: relative;
   }
   
   .theme-toggle:hover {
@@ -80,15 +93,6 @@
 
   .navbar.scrolled {
     background: var(--navbar-bg-scrolled, var(--navbar-bg));
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--accent);
-    text-decoration: none;
-    position: relative;
-    padding-left: 2.5rem;
   }
   
   .nav-links {
@@ -120,25 +124,29 @@
   .nav-links a:hover::after {
     width: 100%;
   }
-  
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
+  .nav-links a:hover {
+    color: var(--accent);
   }
+
   
-  .hamburger span {
-    width: 25px;
-    height: 3px;
-    background: var(--text);
-    transition: 0.3s;
-  }
+  /* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text);
+  border-radius: 3px;
+}
   
   .hero {
     display: flex;
     align-items: center;
-    /* position: relative; */
+    position: relative;
     padding: 10% 10%;
     background: radial-gradient(circle at 75% 30%, var(--accent-glow) 0%, transparent 30%);
     min-height: 100vh;
@@ -181,7 +189,7 @@
     margin-bottom: 1.5rem;
     background: linear-gradient(45deg, var(--accent) 30%, #ffffff 70%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-text-fill-color: transparent; */
   }
   
   .hero-content p {
@@ -312,6 +320,7 @@
     max-width: 700px;
     opacity: 0.9;
   }
+
   
   .project-grid {
     display: grid;
@@ -356,6 +365,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    
   }
   
   .contact-form input,
@@ -382,6 +392,42 @@
   .contact-form button:hover {
     background: #27ae60;
   }
+
+  .info-card {
+    background: var(--card-bg);
+    padding: 1.5rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.986);
+    max-width: 430px;
+    width: 100%;
+    font-weight: 400;
+  }
+  
+  .info-card p {
+    display: flex;
+    align-items: center;
+    margin: 0.8rem 0;
+    font-size: 0.8rem;
+    color: white;
+  }
+  
+  .info-card i {
+    margin-right: 0.5rem;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .info-card a  {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  
+  .info-card a:hover {
+    text-decoration: underline;
+    background-color: white;
+  }
   
   footer {
     background: var(--darker-bg);
@@ -393,7 +439,6 @@
   .social-links {
     margin-top: 2rem;
     display: flex;
-    justify-content: center;
     gap: 2rem;
   }
   
@@ -405,17 +450,8 @@
   
   .social-links a:hover {
     color: var(--accent);
-    transform: translateY(-3px);
+    transform: translateY(-10px);
   }
-  
-  /* .typewriter {
-    display: inline-block;
-    border-right: 2px solid var(--accent);
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 1s steps(30, end) forwards, blink 0.75s step-end infinite;
-  } */
 
   .testimonials {
   padding: 5rem 5%;
@@ -508,12 +544,39 @@
     opacity: 1;
     transform: translateY(0);
   }
+  .map-container {
+    margin-top: 2rem;
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  
   @media (max-width: 768px) {
+   
+    
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
 
     .hero {
       flex-direction: column;
       /* text-align: left; */
       padding: 6.5rem;
+      border: var(--accent-glow) 2px solid;
     }
     .hero-image {
       position: static;
@@ -527,6 +590,7 @@
     }
     .hero-content h1 {
       color: #27ae60;
+      font-size: 1.5rem;
     }
   
     .profile-img {
@@ -557,11 +621,7 @@
       width: 100%;
       display: block;
     }
-  
-    .hamburger {
-      display: flex;
-    }
-  
+    
     .logo {
       font-size: 1.5rem;
       padding-left: 2rem;
