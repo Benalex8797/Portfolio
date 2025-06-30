@@ -256,7 +256,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 0.625rem;
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -268,6 +268,15 @@
     align-items: center;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 20px var(--accent-glow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+  }
+  
+  .tool-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 255, 255, 0.4), 0 0 10px var(--accent-glow);
   }
   
   .tool-item img {
@@ -276,12 +285,23 @@
     margin-bottom: 0.5rem;
     border-radius: 50%;
     background-color: #ffffff;
+    transition: transform 0.3s ease;
+  }
+  
+  .tool-item:hover img {
+    transform: rotate(10deg);
   }
   
   .tool-item span {
     font-size: 0.875rem;
     font-weight: 500;
+    transition: color 0.3s ease;
   }
+  
+  .tool-item:hover span {
+    color: var(--accent-color); /* Add this color variable or replace with a specific color */
+  }
+  
   
   @keyframes spin-slow {
     0% {
@@ -436,22 +456,160 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
   
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .social-box {
+    transform: scale(0.95);
+    animation: fadeSlide 1s ease-in-out;
+    }
+
+  
   .social-links {
-    margin-top: 2rem;
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 2rem 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    justify-content: center;
+  }
+  
+  .social-links li {
+    list-style: none;
   }
   
   .social-links a {
-    color: var(--text);
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
+    width: 160px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 15px;
+    text-decoration: none;
+    color: #262626;
+    transform: rotate(-30deg) skew(25deg);
+    transition: 0.4s ease-in-out;
+    box-shadow: -10px 10px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
+  .social-links a::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 16px;
+    background: #b1b1b1;
+    left: -16px;
+    top: 0;
+    transform: skewY(45deg);
+    z-index: -1;
+  }
+  
+  .social-links a::after {
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 100%;
+    background: #b1b1b1;
+    bottom: -16px;
+    left: 0;
+    transform: skewX(-45deg);
+    z-index: -1;
+  }
+  
+  .social-links a i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #262626;
+    transition: color 0.4s ease;
+  }
+  
+  .social-links a span {
+    font-size: 14px;
+    color: #262626;
+    transition: color 0.4s ease;
   }
   
   .social-links a:hover {
-    color: var(--accent);
-    transform: translateY(-10px);
+    transform: rotate(-30deg) skew(25deg) translate(8px, -8px);
   }
+  
+  .social-links li:hover a i,
+  .social-links li:hover a span {
+    color: #fff;
+  }
+  
+  /* Social-specific hover colors */
+  .social-links li:nth-child(1):hover a {
+    background: #333;
+  }
+  .social-links li:nth-child(2):hover a {
+    background: #0077b5;
+  }
+  .social-links li:nth-child(3):hover a {
+    background: #1da1f2;
+  }
+  .social-links li:nth-child(4):hover a {
+    background: #e4405f;
+  }
+  .social-links li:nth-child(5):hover a {
+    background: #25d366;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .social-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .social-links a {
+      transform: none;
+      width: 90%;
+      height: 50px;
+      border-radius: 12px;
+      padding: 0 1rem;
+      justify-content: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .social-links a::before,
+    .social-links a::after {
+      display: none;
+    }
+  
+    .social-links a:hover {
+      transform: scale(1.03);
+    }
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+  
+  .social-links a i,
+  .social-links a span {
+    animation: bounce 2s ease-in-out infinite;
+  }
+  
+    
+  
 
   .testimonials {
   padding: 5rem 5%;
@@ -625,5 +783,9 @@
     .logo {
       font-size: 1.5rem;
       padding-left: 2rem;
+    }
+
+    .social-links {
+      flex-direction: row;
     }
   }
